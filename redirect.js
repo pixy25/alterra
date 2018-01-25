@@ -2,7 +2,7 @@
   var questions = [];
   var IFRAME_ID = randomString(32);
   var DOMAIN = 'https://pixy25.github.io';
-  var API_URL = DOMAIN + 'alterra/apiBindingFrame.html';
+  var API_URL = DOMAIN + '/alterra/apiBindingFrame.html';
   var MessageComponent = {
     template: '' +
       '<div class="alterra-chat-message-content alterra-clearfix">\n' +
