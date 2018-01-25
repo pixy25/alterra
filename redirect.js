@@ -1,8 +1,8 @@
 (function () {
   var questions = [];
   var IFRAME_ID = randomString(32);
-  var DOMAIN = 'http://localhost:63342';
-  var API_URL = DOMAIN + '/faq/src/alterra/faq/cmd/msbot/widgit/apiBindingFrame.html';
+  var DOMAIN = 'https://pixy25.github.io';
+  var API_URL = DOMAIN + 'alterra/apiBindingFrame.html';
   var MessageComponent = {
     template: '' +
       '<div class="alterra-chat-message-content alterra-clearfix">\n' +
