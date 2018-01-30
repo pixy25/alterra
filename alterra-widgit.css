@@ -59,6 +59,7 @@
 }
 #alterra-live-chat form {
     height: 100%;
+    width: 99%;
     display: inline-block;
 }
 .alterra-chat-message-counter {
