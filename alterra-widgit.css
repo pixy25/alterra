@@ -11,7 +11,7 @@
 	margin: 0;
 }
 #alterra-chat-bot-input {
-    height: 100%;
+    height: 24px;
     width: 100%;
     padding: 0 0 0 10px;
     margin: 0;
@@ -59,7 +59,7 @@
 }
 #alterra-live-chat form {
     height: 100%;
-    width: 99%;
+    width: 100%;
     display: inline-block;
 }
 .alterra-chat-message-counter {
@@ -95,8 +95,8 @@
 	background: #fff;
 }
 .alterra-chat-history {
-	height: 390px;
-	padding: 8px 24px;
+	height: 400px;
+	padding: 0 24px;
 	overflow-y: scroll;
 }
 .alterra-chat-message {
