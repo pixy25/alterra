@@ -94,7 +94,7 @@
 	background: #fff;
 }
 .alterra-chat-history {
-	height: 252px;
+	height: 390px;
 	padding: 8px 24px;
 	overflow-y: scroll;
 }
@@ -190,4 +190,5 @@
 .alterra-actions {
     border: 5px solid #dbdee1;
     box-sizing: border-box;
+    background-color: #dbdee1;;
 }
