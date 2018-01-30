@@ -69,7 +69,7 @@
           widget = document.createElement('div'),
           styleElem = document.createElement('link');
       styleElem.setAttribute('rel', 'stylesheet');
-      styleElem.setAttribute('href', 'https://next.alterra.ai/dev/outpost/static/alterra-widgit.css');
+      styleElem.setAttribute('href', '/alterra-widgit.css');
       widget.id = 'alterra-live-chat';
       widget.innerHTML = this.template;
       body.appendChild(styleElem);
