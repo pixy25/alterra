@@ -5,7 +5,7 @@
   <title>Title</title>
   <script>
     (function () {
-      var API_URL = 'https://next.alterra.ai/api/faq/v1/';
+      var API_URL = 'https://demo.alterra.ai/api/faq/v1/search';
       var headers = [];
       window.onload = function() {
         window.addEventListener('message', receiveMessage);
@@ -16,34 +16,26 @@
       }
 
       function receiveMessage(msg) {
+        var data = JSON.parse(msg.data);
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = onResponse;
-        xhttp.open('GET', API_URL + '?query=' + encodeURIComponent(msg.data), true);
+        xhttp.open('GET', API_URL + '?query=' + encodeURIComponent(data.question), true);
+        xhttp.setRequestHeader('authorization', data.authorization);
         headers.forEach(function (header) {
           xhttp.setRequestHeader(header[0], header[1])
         });
-        xhttp.send();
-        document.getElementsByTagName('body')[0].appendChild(document.createTextNode(msg.data))
+        return xhttp.send();
 
         function onResponse() {
           var data;
           if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
-            msg.source.postMessage(data[0].answer, msg.origin)
+            if (data.results)
+              msg.source.postMessage(data.results[0], msg.origin);
+            else
+              msg.source.postMessage('', msg.origin);
           }
         }
-      }
-
-      function hash(s){
-        var char,
-          hash = 0;
-        if (s.length === 0) return hash;
-        for (i = 0; i < s.length; i++) {
-          char = s.charCodeAt(i);
-          hash = ((hash<<5) - hash) + char;
-          hash = hash & hash; // Convert to 32bit integer
-        }
-        return hash;
       }
     })();
   </script>

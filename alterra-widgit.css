@@ -121,7 +121,7 @@
 	margin-left: 0px;
 	width: 80%;
 	background-color: #eceff1;
-	color: #000000;
+	color: #000;
 	order: 1;
 	border-top-left-radius: 0px;
 	box-shadow: -1px 2px 0px #D4D4D4;
@@ -135,18 +135,22 @@
 	border-bottom-right-radius: 0px;
 	box-shadow: 1px 2px 0px #D4D4D4;
 }
-#alterra-back-to-default {
-	background-color: #32c24d;
-	border: none;
-	color: #fff;
+.alterra-chat-action-button {
+	width: 40%;
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
-	width: 100%;
 	cursor: pointer;
 }
-.alterra-back-to-default-wrapper {
-    display: inline-block;
+#alterra-back-to-default {
+	background-color: #3a96dd;
+	color: #fff;
+}
+#alterra-button-ok {
+	background-color: #eceff1;
+	color: #000;
+}
+.alterra-button-wrapper {
 }
 #alterra-chat-button {
 	bottom: 1em;
@@ -160,7 +164,7 @@
 	box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
 	box-sizing: border-box;
 	padding: 0 20px;
-	cursor: pointer !important;
+	cursor: pointer;
 	display: inline-block;
 }
 
@@ -172,23 +176,18 @@
 }
 #alterra-chat-button p {
 	text-align: left;
-	color: #fff !important;
+	color: #fff;
 	display: inline-block;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	font-size: 1.3em;
 	line-height: 48px;
 	font-weight: bold;
 	margin: 0 0 0 12px;
 	max-width: 200px;
 	vertical-align: top;
-	transition: .6s ease-in-out !important;
+	transition: .6s ease-in-out;
 }
 .alterra-actions {
-    height: 50px;
     border: 5px solid #dbdee1;
-    bottom: 0;
     box-sizing: border-box;
-    left: 0;
-    position: absolute;
-    right: 0;
 }
